@@ -1,0 +1,26 @@
+{% extends 'students/base.html' %}
+{%load static%}
+{% block content %}
+<script>
+  
+</script>
+<h2>Wrong Questions for {{ exam.name }}</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for question in wrong_questions %}
+    <tr>
+      <td>{{ question.text }}</td>
+      <td>{{ question.answer }}</td>
+      <td>{{ request.COOKIES.getloop.forloop.counter }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'eexam/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/vendor/material-dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/06b9cf6036.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+      a:link {
+        text-decoration: none;
+      }
+  
+  
+      .card1 {
+        
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      .card1 .card-block {
+        padding: 25px;
+      }
+      .card-block:hover{
+        box-shadow: 0 10px 50px #06060633;
+      }
+      
+      .order-card i {
+        font-size: 26px;
+      }
+  
+      .f-left {
+        float: left;
+      }
+  
+      .f-right {
+        float: right;
+      }
+      header {
+      left: 0px;
+      right: 0px;
+      background-color: black;
+
+    }
+    
+    </style>
+  </head> 
+  <body style="display: flex; background-color: #202940;">
+    
+      <h1 style="font-weight: 500; color: white; margin-left: 500px;" >ADMIN DASHBOARD</h1>
+      <br><br>
+
+      <div class="row" style=" position: absolute; width: 1400px;" >
+      <div class="col-xl-3   col-sm-6" style="margin-left: 200px;">
+        <a href="view-student" class="warning-link" style="text-decoration: none;color:white;">
+        <div class="card card-stats" style=" background-color: #202940; box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.957);">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <p class="card-category" style="font-size: large; font-weight: 200; color: rgb(255, 255, 255);">Registered Students</p>
+            <h3 class="card-title" style="color: white;">{{total_student}}
+              
+            </h3>
+          </div>
+           <div class="card-footer">
+            <div class="stats">
+              <br>
+            
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
+      
+      <div class="col-xl-3   col-sm-6" style="margin-left: 30px;">
+        <a href="view-exam" style="text-decoration: none;color:white;">
+        <div class="card card-stats" style=" background-color: #202940; box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.918);">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon" style="background: linear-gradient(60deg, #d22824, #da3a36);">
+              <i class=" fas fa-book"></i>
+            </div>
+            <p class="card-category" style="font-size: large; font-weight: 200; color: rgb(255, 254, 254);">Total Courses</p>
+            <h3 class="card-title"  style="color: white;" >{{total_course}}
+              
+            </h3>
+          </div>
+           <div class="card-footer">
+            <div class="stats">
+              <br>
+            
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
+    
+      
+    <div class="col-xl-3   col-sm-6" style="margin-left: 30px; box-shadow: #029eb1; ">
+      <a href="dash-view-question" style="text-decoration: none;color:white;  ">
+      <div class="card card-stats" style=" background-color: #202940;  box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.882);" >
+        <div class="card-header card-header-warning card-header-icon" >
+          <div class="card-icon" style="background: linear-gradient(60deg, #029eb1, #25b1c3); " >
+            <i class="fas fa-question-circle-o"></i>
+          </div>
+          <p class="card-category" style="font-size: large; font-weight: 200; color: rgb(251, 251, 251);">Available Questions</p>
+          <h3 class="card-title"  style="color: white;">{{total_question}}
+          </h3>
+        </div>
+         <div class="card-footer">
+          <div class="stats">
+            <br>
+          
+          </div>
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>
+  </div>
+  
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+
+{% endblock content %}
+
+</body>

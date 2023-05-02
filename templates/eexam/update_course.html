@@ -1,0 +1,47 @@
+{% extends 'eexam/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <style media="screen">
+    input[type=text], select,input[type=number] ,input[type=password], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  </style>
+</head>
+
+<br><br>
+<h2 style="text-align:center; color: white;">Update Course</h2>
+<div style="color: white;">
+  <form method="post" autocomplete="off" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+        <label for="course_name">Course Name</label>
+        {% render_field form.course_name class="form-control" placeholder="Course Name" %}
+        <label for="description">Description</label>
+        {% render_field form.description class="form-control" placeholder="Description" %}
+        <label for="isactive">Active</label>
+        {% render_field form.isactive class="form-control" %}
+    <input type="submit" value="Update" style="border-radius:0px; background-color: rgb(34, 170, 223);">
+  </form>
+</div>
+{% endblock %}

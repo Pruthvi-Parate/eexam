@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{}
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .jumbotron{
+   margin-top: 50px;
+  }
+  .back-video{
+    position:fixed;
+    top:0;
+    bottom: 0;
+    z-index: -1;
+  }
+  @media (min-aspect-ratio: 16/9){
+    .back-video{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (max-aspect-ratio: 16/9){
+    .back-video{
+      width: auto;
+      height: 100%;
+    }
+  }
+  .content1{
+    text-align: center;
+    font-size: 100px;
+    color: rgb(252, 252, 252);
+    transition: 0.5s;
+  }
+  
+  .content1 h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .content1:hover {
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-fill-color: #17a2b8;
+    color: transparent;
+  }
+  
+</style>
+<body>
+  
+  {% include "eexam/navbar.html"  %}
+  
+<br>
+<video autoplay loop muted plays-inline class="back-video">
+  <source src="/static/image/website6.mp4" type="video/mp4">
+</video>
+<section style="margin-top: 150px;">
+  <div class="container text-center">
+    <h1 class=" content1">E-EXAM</h1>
+   
+  
+    <p><strong> </strong></p>
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp Student SignUp</a>
+    <br><br>
+    <a href="adminlogin" class="btn btn-lg btn-info" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp Admin</a>
+    <br><br><br>
+  </div>  
+</section>
+  
+
+
+</body>
+
+</html>

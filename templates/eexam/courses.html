@@ -1,0 +1,134 @@
+{% extends 'eexam/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+      a:link {
+        text-decoration: none;
+      }
+  
+      .order-card {
+        color: rgb(255, 255, 255);
+      }
+  
+      .bg-c-blue {
+        background: #04868f;
+      }
+  
+      .bg-c-gtx {
+        background:#57717d;
+      }
+  
+      .bg-c-yellow {
+        background: #F56565;
+      }
+  
+      .bg-c-pink {
+        background: #663a30;
+      }
+  
+  
+      .card1 {
+        
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      .card1 .card-block {
+        padding: 25px;
+      }
+  
+      .order-card i {
+        font-size: 26px;
+      }
+  
+      .f-left {
+        float: left;
+      }
+  
+      .f-right {
+        float: right;
+      }
+      header {
+      left: 0px;
+      right: 0px;
+      color: black;
+    }
+    
+    </style>
+</head>
+<br><br>
+<body style="display: flex; background-color: #202940;">
+<div class="row" style=" position: absolute; width: 1500px;">
+  <div class="col-xl-3   col-sm-6" style="margin-left: 110px; ">
+    <a href="add-exam" style="text-decoration: none;color:white;">
+    <div class="card card-stats" style=" background-color: #202940; box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.957);">
+      <div class="card-header card-header-warning card-header-icon">
+        <div class="card-icon">
+          <i class="fas fa-plus" style="font-size: 40px;"></i>
+        </div>
+        <br>
+       
+        
+          
+        </h3>
+      </div>
+       <div class="card-footer">
+        <div class="stats">
+          <br>
+        <h2>Add Course</h2>
+        </div>
+      </div>
+    </div>
+  </a>
+  </div>
+  
+  <div class="col-xl-3   col-sm-6" style="margin-left: 110px;">
+    <a href="view-exam" style="text-decoration: none;color:white;">
+    <div class="card card-stats" style=" background-color: #202940; box-shadow:0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.957);">
+      <div class="card-header card-header-warning card-header-icon">
+        <div class="card-icon">
+          <i class="fas fa-eye" style="font-size: 40px;"></i>
+        </div>
+        <br>
+        
+        
+          
+        </h3>
+      </div>
+       <div class="card-footer">
+        <div class="stats">
+          <br>
+          <h2>View Your Courses</h2>
+        </div>
+      </div>
+    </div>
+  </a>
+  </div>
+  </div>
+  
+     
+  
+     
+    </div>
+  </div>
+
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+
+{% endblock content %}
+</body>

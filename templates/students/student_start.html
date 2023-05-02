@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    /* .jumbotron h1 {
+      text-align: center;
+    } */
+    .back-video{
+    position:fixed;
+    top:0;
+    bottom: 0;
+    z-index: -1;
+  }
+  @media (min-aspect-ratio: 16/9){
+    .back-video{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (max-aspect-ratio: 16/9){
+    .back-video{
+      width: auto;
+      height: 100%;
+    }
+  }
+    .content1{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+  
+  .content1 h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .content1:hover {
+    -webkit-text-stroke: 2px #000000;
+    -webkit-text-fill-color: #2abadb;
+    border-color: black;;
+    color: transparent;
+  }
+  
+  </style>
+
+</head>
+
+<body>
+
+  {% include "eexam/navbar.html" %}
+  <br><br>
+  <video autoplay loop muted plays-inline class="back-video">
+    <source src="/static/image/website7.mp4" type="video/mp4">
+  </video>
+  <div class="jumbotron" style="margin-bottom:0px; background: transparent;">
+    <h1 class="content1">Start From Here</h1>
+    <center>
+    <p class="lead">
+      <a class="btn btn-primary " href="{% url 'studentsignup' %}" style="border-radius: 0%;" role="button">Create Your Account</a>
+      <a class="btn btn-success " href="{% url 'studentlogin' %}" style="border-radius: 0%; background-color: rgb(38, 130, 166);" role="button">Login Now</a>
+    </p></center>
+  </div>
+ 
+  
+</body>
+
+</html>

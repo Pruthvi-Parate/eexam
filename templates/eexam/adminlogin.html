@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("static/image/vector3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+
+}
+
+.box {
+    width: 495px;
+    padding: 40px;
+    
+    position:fixed;;
+    right: 60%;
+    top: 5%;
+   
+    background: #abb0b6;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 200px;
+    margin-right: 10px;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #e0dfdf;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: rgb(4, 0, 0);
+    border-radius: 5px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: rgb(0, 0, 0);
+    font-weight: 700
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: #12b7d4;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: #32918f;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    
+    padding: 14px 40px;
+    outline: none;
+    color: rgb(12, 1, 1);
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: #01adf1;
+}
+
+
+
+
+    </style>
+  </head>
+  <body>
+    
+    {% include "eexam/navbar.html" %}
+    
+
+
+    <div class="container" >
+    <div class="row">
+        <div class="col-md-6" >
+            <div class="card"  >
+                <form class="box" method="post" >
+                    {% csrf_token %}
+                    <h1>Admin Login</h1>
+
+                     {% render_field form.username class="form-control" autocomplete="off" placeholder="Username" %}
+                     {% render_field form.password class="form-control" autocomplete="off" placeholder="Password" %}
+
+                     <input type="submit" name="" value="Admin Login">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  </body>
+</html>
